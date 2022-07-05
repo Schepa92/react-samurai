@@ -1,0 +1,16 @@
+.content {
+  grid-area: c;
+  background-color: blue;
+  display: grid;
+  grid-gap: 5px;
+}
+
+.content__header {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.item {
+  color: red;
+}

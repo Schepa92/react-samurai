@@ -9,30 +9,3 @@
     'n c';
   margin: 0 auto;
 }
-
-.header {
-  grid-area: h;
-  background-image: linear-gradient(black, white);
-}
-
-.header img {
-  width: 100px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: aqua;
-}
-
-.content {
-  grid-area: c;
-  background-color: blue;
-  display: grid;
-  grid-gap: 5px;
-}
-
-.content__header {
-  object-fit: cover;
-  width: 100%;
-  height: 200px;
-}

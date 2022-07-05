@@ -1,9 +1,11 @@
+import s from './Profile.module.css';
+
 function Content() {
   return (
-    <div className='content'>
+    <div className={s.content}>
       <div>
         <img
-          className='content__header'
+          className={s.content__header}
           src='https://gratisography.com/wp-content/uploads/2022/06/gratisography-boom-box-free-stock-photo-1170x780.jpg'
         />
       </div>
@@ -12,8 +14,10 @@ function Content() {
       </div>
       <div>My posts</div>
       <div>New post</div>
-      <div>post 1</div>
-      <div>post 2</div>
+      <div className={s.posts}>
+        <div className={s.item}>post 1</div>
+        <div className={s.item}>post 2</div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,8 @@
+.header {
+  grid-area: h;
+  background-image: linear-gradient(black, white);
+}
+
+.header img {
+  width: 100px;
+}
