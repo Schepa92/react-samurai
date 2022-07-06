@@ -1,6 +1,6 @@
 import s from './Navbar.module.css';
 
-function NavBar() {
+const NavBar = () => {
   return (
     <nav className={s.nav}>
       <div className={`${s.item} ${s.active}`}>
@@ -20,6 +20,6 @@ function NavBar() {
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;

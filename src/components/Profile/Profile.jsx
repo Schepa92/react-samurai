@@ -1,6 +1,7 @@
+import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css';
 
-function Content() {
+const Profile = () => {
   return (
     <div className={s.content}>
       <div>
@@ -12,14 +13,9 @@ function Content() {
       <div>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Novosibirsk_Metro_logo.svg/97px-Novosibirsk_Metro_logo.svg.png' />
       </div>
-      <div>My posts</div>
-      <div>New post</div>
-      <div className={s.posts}>
-        <div className={s.item}>post 1</div>
-        <div className={s.item}>post 2</div>
-      </div>
+      <MyPosts />
     </div>
   );
-}
+};
 
-export default Content;
+export default Profile;

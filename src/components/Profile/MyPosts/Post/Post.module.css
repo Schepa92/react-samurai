@@ -1,0 +1,13 @@
+.item {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  border: 1px dotted blue;
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+}

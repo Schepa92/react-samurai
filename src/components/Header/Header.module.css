@@ -2,6 +2,7 @@
   grid-area: h;
   background-color: gray;
   border: 5px double black;
+  border-radius: 30px;
 }
 
 .logo {
