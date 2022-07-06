@@ -1,14 +1,16 @@
 .content {
   grid-area: c;
-  background-color: blue;
+  background-image: linear-gradient(to top, grey, gold);
   display: grid;
   grid-gap: 5px;
+  border: 5px double black;
 }
 
 .content__header {
   object-fit: cover;
   width: 100%;
   height: 200px;
+  box-shadow: 0 0 10px black;
 }
 
 .item {

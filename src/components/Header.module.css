@@ -1,8 +1,10 @@
 .header {
   grid-area: h;
-  background-image: linear-gradient(black, white);
+  background-color: gray;
+  border: 5px double black;
 }
 
-.header img {
-  width: 100px;
+.logo {
+  border-radius: 50%;
+  width: 130px;
 }
