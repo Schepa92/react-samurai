@@ -1,20 +1,25 @@
 import s from './Dialogs.module.css';
+import { useParams } from 'react-router-dom';
+import Dialog from './Dialog/Dialog';
+import Message from './Message/Message';
 
 const Dialogs = (props) => {
+  // console.log(useParams());
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs_items}>
-        <div className={s.dialog + ' ' + s.active}>Sergey</div>
-        <div className={s.dialog}>Andrey</div>
-        <div className={s.dialog}>Dima</div>
-        <div className={s.dialog}>Alex</div>
-        <div className={s.dialog}>Vlad</div>
-        <div className={s.dialog}>Valera</div>
+        <Dialog name='Sergey' id='1' />
+        <Dialog name='Andrey' id='2' />
+        <Dialog name='Alex' id='3' />
+        <Dialog name='Vlad' id='4' />
+        <Dialog name='Valera' id='5' />
       </div>
       <div className={s.messages}>
-        <div className={s.message}>Hi!</div>
-        <div className={s.message}>How is your It-kamasutra</div>
-        <div className={s.message}>Yo!</div>
+        <Message message='Hello!' />
+        <Message message='Hello!21e2e' />
+        <Message message='Hellorrwee!' />
+        <Message message='Helweerefdlo!' />
+        <Message message='Heldsfdlo!' />
       </div>
     </div>
   );
