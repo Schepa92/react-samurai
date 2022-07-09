@@ -11,6 +11,11 @@ let state = {
         message: 'My friend',
         likesCount: 72,
       },
+      {
+        id: 1,
+        message: 'How are you?',
+        likesCount: 12,
+      },
     ],
   },
   dialogsPage: {
@@ -51,6 +56,24 @@ let state = {
       },
     ],
   },
+  sidebar: [
+    {
+      name: 'Sergey',
+      url: 'https://cspromogame.ru//storage/upload_images/avatars/856.jpg',
+    },
+    {
+      name: 'Andrew',
+      url: 'https://cspromogame.ru//storage/upload_images/avatars/858.jpg',
+    },
+    {
+      name: 'Alex',
+      url: 'https://cspromogame.ru//storage/upload_images/avatars/4169.jpg',
+    },
+    {
+      name: 'Valera',
+      url: 'https://cspromogame.ru//storage/upload_images/avatars/1299.jpg',
+    },
+  ],
 };
 
 export default state;

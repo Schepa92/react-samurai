@@ -1,11 +1,11 @@
 .header {
   grid-area: h;
-  background-color: gray;
   border: 5px double black;
   border-radius: 30px;
+  overflow: hidden;
+  background-image: linear-gradient(to right, white, white, grey);
 }
 
 .logo {
-  border-radius: 50%;
-  width: 130px;
+  height: 100%;
 }

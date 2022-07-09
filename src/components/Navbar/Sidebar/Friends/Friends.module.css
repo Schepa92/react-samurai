@@ -1,0 +1,17 @@
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.friends {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.text {
+  font-size: 10px;
+  margin: 0;
+}

@@ -9,6 +9,8 @@
   font-size: 1.5em;
   border: 5px double black;
   border-radius: 30px;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .item a {

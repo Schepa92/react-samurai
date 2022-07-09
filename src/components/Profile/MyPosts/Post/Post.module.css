@@ -3,8 +3,10 @@
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr;
   align-items: center;
-  border: 1px dotted blue;
+  border: 1px outset;
   border-radius: 10px;
+  box-shadow: 0 0 10px;
+  padding: 10px;
 }
 
 .avatar {
