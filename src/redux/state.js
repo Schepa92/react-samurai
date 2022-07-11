@@ -1,3 +1,5 @@
+import { rerenderTree } from '../render';
+
 let state = {
   profilePage: {
     postData: [
@@ -74,6 +76,16 @@ let state = {
       url: 'https://cspromogame.ru//storage/upload_images/avatars/1299.jpg',
     },
   ],
+};
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    message: postMessage,
+    likesCount: 0,
+  };
+  state.profilePage.postData.push(newPost);
+  rerenderTree(state);
 };
 
 export default state;

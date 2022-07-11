@@ -1,6 +1,8 @@
+import { render } from '@testing-library/react';
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
+import { ReactDOM } from 'react';
 
 const MyPosts = (props) => {
   let postsElements = props.postData.map((p) => (
@@ -9,16 +11,17 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
+  let newPost = () => {
     let text = newPostElement.current.value;
-    alert(text);
+    console.log(text);
+    props.addPost(text);
   };
 
   return (
     <div className={s.posts}>
       <h3>My posts</h3>
       <textarea ref={newPostElement}></textarea>
-      <button onClick={addPost}>Add post</button>
+      <button onClick={newPost}>Add post</button>
       <div className={s.posts}>{postsElements}</div>
     </div>
   );
