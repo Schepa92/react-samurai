@@ -1,26 +1,29 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
-import { ReactDOM } from 'react';
 
 const MyPosts = (props) => {
-  let postsElements = props.postData.map((p) => (
+  let postsElements = props.profilePage.postData.map((p) => (
     <Post message={p.message} likesCount={p.likesCount} id={p.id} />
   ));
 
   let newPostElement = React.createRef();
 
   let newPost = () => {
+    props.addPost();
+    newPostElement.current.value = '';
+  };
+
+  let onPostChange = () => {
     let text = newPostElement.current.value;
-    console.log(text);
-    props.addPost(text);
+    props.updateNewPostText(text);
+    console.log(props.profilePage);
   };
 
   return (
     <div className={s.posts}>
       <h3>My posts</h3>
-      <textarea ref={newPostElement}></textarea>
+      <textarea onChange={onPostChange} ref={newPostElement} />
       <button onClick={newPost}>Add post</button>
       <div className={s.posts}>{postsElements}</div>
     </div>
