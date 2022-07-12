@@ -4,7 +4,7 @@ import Friends from './Friends/Friends';
 const Sidebar = (props) => {
   return (
     <>
-      <Friends data={props.data} />
+      <Friends state={props.state} />
     </>
   );
 };

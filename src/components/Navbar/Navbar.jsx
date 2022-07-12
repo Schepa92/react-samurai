@@ -34,7 +34,7 @@ const NavBar = (props) => {
           </NavLink>
         </div>
         <div>
-          <Sidebar data={props.data} />
+          <Sidebar state={props.state} />
         </div>
       </nav>
     </>
