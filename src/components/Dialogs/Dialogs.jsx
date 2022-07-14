@@ -5,7 +5,7 @@ import React from 'react';
 import {
   addMessageActionCreate,
   updateNewMassageTextActionCreate,
-} from '../../redux/store';
+} from '../../redux/dialogsReducer';
 
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsPage.dialogsData.map((d) => (
@@ -26,6 +26,7 @@ const Dialogs = (props) => {
   let onMessageChange = (event) => {
     let text = event.target.value;
     props.dispatch(updateNewMassageTextActionCreate(text));
+    console.log(props.dialogsPage);
   };
 
   return (
