@@ -1,7 +1,7 @@
 import s from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
 import Sidebar from './Sidebar/Sidebar';
-
+import React from 'react';
 const activeLink = ({ isActive }) => (isActive ? s.active : '');
 
 const NavBar = (props) => {
