@@ -2,7 +2,7 @@ const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 let initialState = {
-  postData: [
+  posts: [
     {
       id: 1,
       message: 'How are you?',
@@ -30,7 +30,7 @@ const profileReducer = (state = initialState, action) => {
         message: state.newPostText,
         likesCount: 0,
       };
-      state.postData.push(newPost);
+      state.posts.push(newPost);
       state.newPostText = '';
       break;
 

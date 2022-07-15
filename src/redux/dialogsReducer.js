@@ -2,7 +2,7 @@ const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
-  dialogsData: [
+  dialogs: [
     {
       name: 'Sergey',
       id: 1,
@@ -20,7 +20,7 @@ let initialState = {
       id: 4,
     },
   ],
-  messagesData: [
+  messages: [
     {
       message: 'Hello',
       id: 1,
@@ -38,7 +38,7 @@ let initialState = {
       id: 4,
     },
   ],
-  newMessageText: '',
+  newMessageText: 'Hello',
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -48,7 +48,7 @@ const dialogsReducer = (state = initialState, action) => {
         id: 0,
         message: state.newMessageText,
       };
-      state.messagesData.push(newMessage);
+      state.messages.push(newMessage);
       state.newMessageText = '';
       break;
 

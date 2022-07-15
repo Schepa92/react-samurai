@@ -2,9 +2,10 @@ import React from 'react';
 import Friends from './Friends/Friends';
 
 const Sidebar = (props) => {
+  // debugger;
   return (
     <>
-      <Friends state={props.state} />
+      <Friends sidebar={props.sidebar} />
     </>
   );
 };
