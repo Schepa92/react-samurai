@@ -6,7 +6,7 @@ import React from 'react';
 const activeLink = ({ isActive }) => (isActive ? s.active : '');
 
 const NavBar = (props) => {
-  let state = props.store.getState();
+  // let state = props.store.getState();
 
   return (
     <>
@@ -37,7 +37,7 @@ const NavBar = (props) => {
           </NavLink>
         </div>
         <div>
-          <Sidebar sidebar={state.sidebar} />
+          <Sidebar /*sidebar={state.sidebar}*/ />
         </div>
       </nav>
     </>

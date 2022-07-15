@@ -16,13 +16,16 @@ const App = (props) => {
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <NavBar store={props.store} />
+        <NavBar /*store={props.store}*/ />
         <div className='app-wrapper__content'>
           <Routes>
-            <Route path='/profile' element={<Profile store={props.store} />} />
+            <Route
+              path='/profile'
+              element={<Profile /*store={props.store}*/ />}
+            />
             <Route
               path='/dialogs'
-              element={<DialogsContainer store={props.store} />}
+              element={<DialogsContainer /*store={props.store}*/ />}
             />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
