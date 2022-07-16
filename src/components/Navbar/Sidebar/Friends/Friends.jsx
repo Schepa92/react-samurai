@@ -1,6 +1,7 @@
 import React from 'react';
 import FriendsItem from './FriendsItem';
 import s from './Friends.module.css';
+import { NavLink } from 'react-router-dom';
 
 const Friends = (props) => {
   // debugger;
@@ -9,7 +10,9 @@ const Friends = (props) => {
   ));
   return (
     <>
-      <h3>Friends</h3>
+      <NavLink to='/users'>
+        <h3 className={s.sidebarTitle}>Friends</h3>
+      </NavLink>
       <div className={s.friends}>{friendsElements}</div>
     </>
   );

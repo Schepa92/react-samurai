@@ -15,3 +15,8 @@
   font-size: 10px;
   margin: 0;
 }
+
+.sidebarTitle {
+  color: black;
+  text-decoration: underline;
+}
