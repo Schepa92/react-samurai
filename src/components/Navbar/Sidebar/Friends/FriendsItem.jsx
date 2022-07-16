@@ -1,4 +1,3 @@
-import avatar from '../../../images/avatar.jpg';
 import React from 'react';
 import s from './Friends.module.css';
 

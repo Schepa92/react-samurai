@@ -14,6 +14,7 @@ const Post = (props) => {
         <img src={like} className={s.like_button} alt='like' />
         Like: ({props.likesCount})
       </div>
+      <div style={{ color: 'green' }}>{props.id}</div>
     </div>
   );
 };

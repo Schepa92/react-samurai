@@ -1,6 +1,7 @@
 .dialogs {
   display: grid;
   grid-template-columns: 2fr 10fr;
+  height: 100%;
 }
 
 .dialogs_items {
@@ -8,9 +9,25 @@
 }
 
 .messages {
-  grid-template-rows: 1fr 0.5fr 0.2fr;
+  grid-template-rows: 4fr 0.5fr;
   display: grid;
   justify-items: start;
   padding: 10px;
   gap: 10px;
+}
+
+.messagesElements {
+  width: 100%;
+}
+
+.sendMess {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  width: 100%;
+  gap: 5px;
+}
+
+.sendMess button {
+  border-radius: 10px;
+  border: none;
 }
