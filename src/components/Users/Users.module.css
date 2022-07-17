@@ -5,6 +5,8 @@
 
 .selected {
   font-weight: bold;
+  text-shadow: 0 0 5px;
+  color: white;
 }
 
 .pageNumbers {
