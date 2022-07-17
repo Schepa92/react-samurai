@@ -6,8 +6,6 @@ import React from 'react';
 const activeLink = ({ isActive }) => (isActive ? s.active : '');
 
 const NavBar = (props) => {
-  // let state = props.store.getState();
-
   return (
     <>
       <nav className={s.nav}>
@@ -37,7 +35,7 @@ const NavBar = (props) => {
           </NavLink>
         </div>
         <div>
-          <Sidebar /*sidebar={state.sidebar}*/ />
+          <Sidebar />
         </div>
       </nav>
     </>

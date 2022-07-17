@@ -2,3 +2,11 @@
   border-radius: 50%;
   width: 100px;
 }
+
+.selected {
+  font-weight: bold;
+}
+
+.pageNumbers {
+  cursor: pointer;
+}

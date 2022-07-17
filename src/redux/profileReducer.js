@@ -4,17 +4,17 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 let initialState = {
   posts: [
     {
-      // id: '',
+      id: 4343625,
       message: 'How are you?',
       likesCount: 12,
     },
     {
-      // id: '',
+      id: 78489780,
       message: 'My friend',
       likesCount: 72,
     },
     {
-      // id: '',
+      id: 609786,
       message: 'How are you?',
       likesCount: 12,
     },

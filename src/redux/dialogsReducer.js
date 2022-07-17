@@ -5,37 +5,37 @@ let initialState = {
   dialogs: [
     {
       name: 'Sergey',
-      id: 1,
+      id: 5435341,
     },
     {
       name: 'Andrew',
-      id: 2,
+      id: 52345342,
     },
     {
       name: 'Alex',
-      id: 3,
+      id: 31452,
     },
     {
       name: 'Vlad',
-      id: 4,
+      id: 43214,
     },
   ],
   messages: [
     {
       message: 'Hello',
-      id: 1,
+      id: 13646,
     },
     {
       message: 'Helweerefdlo',
-      id: 2,
+      id: 265426,
     },
     {
       message: 'Aldfsewex',
-      id: 3,
+      id: 334234,
     },
     {
       message: 'Vwefewflad',
-      id: 4,
+      id: 46675,
     },
   ],
   newMessageText: 'Hello',

@@ -10,23 +10,16 @@ import React from 'react';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 
-const App = (props) => {
-  // debugger;
+const App = () => {
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <NavBar /*store={props.store}*/ />
+        <NavBar />
         <div className='app-wrapper__content'>
           <Routes>
-            <Route
-              path='/profile'
-              element={<Profile /*store={props.store}*/ />}
-            />
-            <Route
-              path='/dialogs'
-              element={<DialogsContainer /*store={props.store}*/ />}
-            />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/dialogs' element={<DialogsContainer />} />
             <Route path='/users' element={<UsersContainer />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
