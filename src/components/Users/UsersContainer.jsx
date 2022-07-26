@@ -15,8 +15,6 @@ import Preloader from '../Preloader/Preloader';
 class UsersContainer extends React.Component {
   componentDidMount() {
     console.log('Open users page');
-
-    // if (this.props.users.length === 0)
     this.props.toggleIsFetching(true);
     axios
       .get(

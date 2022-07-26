@@ -4,7 +4,7 @@ import loadingIco from '../images/loading.gif';
 const Preloader = () => {
   return (
     <div>
-      <img src={loadingIco} />
+      <img src={loadingIco} alt='loading' />
     </div>
   );
 };
