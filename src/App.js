@@ -1,6 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
+import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
@@ -9,26 +8,25 @@ import React from 'react';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className='app-wrapper'>
-        <Header />
-        <NavBar />
-        <div className='app-wrapper__content'>
-          <Routes>
-            <Route path='/profile/:profileId' element={<ProfileContainer />} />
-            <Route path='/profile' element={<ProfileContainer />} />
-            <Route path='/dialogs/*' element={<DialogsContainer />} />
-            <Route path='/users' element={<UsersContainer />} />
-            <Route path='/news' element={<News />} />
-            <Route path='/music' element={<Music />} />
-            <Route path='/settings' element={<Settings />} />
-          </Routes>
-        </div>
+    <div className='app-wrapper'>
+      <HeaderContainer />
+      <NavBar />
+      <div className='app-wrapper__content'>
+        <Routes>
+          <Route path='/profile/:profileId' element={<ProfileContainer />} />
+          <Route path='/profile/' element={<ProfileContainer />} />
+          <Route path='/dialogs/*' element={<DialogsContainer />} />
+          <Route path='/users' element={<UsersContainer />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/music' element={<Music />} />
+          <Route path='/settings' element={<Settings />} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 
