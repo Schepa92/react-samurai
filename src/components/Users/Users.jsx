@@ -2,6 +2,7 @@ import React from 'react';
 import s from '../Users/Users.module.css';
 import defaultAvatar from '../images/logo23.png';
 import { NavLink } from 'react-router-dom';
+import * as axios from 'axios';
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -45,7 +46,21 @@ const Users = (props) => {
                 {u.followed ? (
                   <button
                     onClick={() => {
-                      props.unfollow(u.id);
+                      axios
+                        .delete(
+                          `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                          {
+                            withCredentials: true,
+                            headers: {
+                              'API-KEY': 'e9786620-561c-440a-b79f-ca9aa8369084',
+                            },
+                          }
+                        )
+                        .then((response) => {
+                          if (response.data.resultCode === 0) {
+                            props.unfollow(u.id);
+                          }
+                        });
                     }}
                   >
                     Unfollow
@@ -53,7 +68,22 @@ const Users = (props) => {
                 ) : (
                   <button
                     onClick={() => {
-                      props.follow(u.id);
+                      axios
+                        .post(
+                          `https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
+                          {},
+                          {
+                            withCredentials: true,
+                            headers: {
+                              'API-KEY': 'e9786620-561c-440a-b79f-ca9aa8369084',
+                            },
+                          }
+                        )
+                        .then((response) => {
+                          if (response.data.resultCode === 0) {
+                            props.follow(u.id);
+                          }
+                        });
                     }}
                   >
                     Follow
