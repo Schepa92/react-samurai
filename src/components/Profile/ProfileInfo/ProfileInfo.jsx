@@ -1,4 +1,4 @@
-import s from '../Profile.module.css';
+// import s from '../Profile.module.css';
 import React from 'react';
 import Preloader from '../../Preloader/Preloader';
 
