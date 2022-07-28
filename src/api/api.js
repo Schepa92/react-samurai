@@ -16,9 +16,6 @@ export const usersAPI = {
         return response.data;
       });
   },
-};
-
-export const followAPI = {
   followed(id) {
     return instance.post(`follow/${id}`).then((response) => {
       return response.data;

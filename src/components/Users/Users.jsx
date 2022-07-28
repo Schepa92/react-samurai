@@ -2,7 +2,6 @@ import React from 'react';
 import s from '../Users/Users.module.css';
 import defaultAvatar from '../images/logo23.png';
 import { NavLink } from 'react-router-dom';
-import { followAPI } from '../../api/api';
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -49,13 +48,7 @@ const Users = (props) => {
                       (id) => id === u.id
                     )}
                     onClick={() => {
-                      props.toggleFollowingProgress(true, u.id);
-                      followAPI.unfollowed(u.id).then((data) => {
-                        props.toggleFollowingProgress(false, u.id);
-                        if (data.resultCode === 0) {
-                          props.unfollow(u.id);
-                        }
-                      });
+                      props.unfollowing(u.id);
                     }}
                   >
                     Unfollow
@@ -66,13 +59,7 @@ const Users = (props) => {
                       (id) => id === u.id
                     )}
                     onClick={() => {
-                      props.toggleFollowingProgress(true, u.id);
-                      followAPI.followed(u.id).then((data) => {
-                        props.toggleFollowingProgress(false, u.id);
-                        if (data.resultCode === 0) {
-                          props.follow(u.id);
-                        }
-                      });
+                      props.following(u.id);
                     }}
                   >
                     Follow
