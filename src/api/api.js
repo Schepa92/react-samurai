@@ -46,12 +46,15 @@ export const authAPI = {
       return response.data;
     });
   },
-  login(email, password, rememberMe) {
+  login(email, password, rememberMe = false) {
     return instance
       .post(`auth/login`, { email, password, rememberMe })
       .then((response) => {
         console.log(response.data);
         return response.data;
       });
+  },
+  logout() {
+    return instance.delete(`auth/login`);
   },
 };
