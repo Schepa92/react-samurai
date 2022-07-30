@@ -46,4 +46,12 @@ export const authAPI = {
       return response.data;
     });
   },
+  login(email, password, rememberMe) {
+    return instance
+      .post(`auth/login`, { email, password, rememberMe })
+      .then((response) => {
+        console.log(response.data);
+        return response.data;
+      });
+  },
 };

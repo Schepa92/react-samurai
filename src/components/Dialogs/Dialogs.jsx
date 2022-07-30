@@ -2,6 +2,7 @@ import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 import React from 'react';
+import { Formik, Form, Field } from 'formik';
 
 const Dialogs = (props) => {
   console.log('Open Dialogs Page');
@@ -14,30 +15,27 @@ const Dialogs = (props) => {
     <Message message={m.message} id={m.id} key={m.id} />
   ));
 
-  let newMessageText = props.newMessageText;
-
-  let addMessage = () => {
-    props.addMessage();
-  };
-
-  let onMessageChange = (event) => {
-    let text = event.target.value;
-    props.onMessageChange(text);
-  };
-
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs_items}>{dialogsElements}</div>
       <div className={s.messages}>
         <div className={s.messagesElements}>{messagesElements}</div>
-        <div className={s.sendMess}>
-          <textarea
-            value={newMessageText}
-            onChange={onMessageChange}
-            placeholder='Enter your message'
-          ></textarea>
-          <button onClick={addMessage}>Add Message</button>
-        </div>
+        <Formik
+          initialValues={{ message: '' }}
+          onSubmit={(values, { resetForm }) => {
+            props.addMessage(values.message);
+            resetForm();
+          }}
+        >
+          {({ values }) => (
+            <Form className={s.sendMess}>
+              <Field placeholder='Enter your message' name='message' />
+              <button type='submit' disabled={!values.message}>
+                Add Message
+              </button>
+            </Form>
+          )}
+        </Formik>
       </div>
     </div>
   );
