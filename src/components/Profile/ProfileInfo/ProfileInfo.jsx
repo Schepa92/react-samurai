@@ -1,7 +1,7 @@
-// import s from '../Profile.module.css';
 import React from 'react';
 import Preloader from '../../Preloader/Preloader';
 import ProfileStatus from './ProfileStatus';
+import defaultAvatar from '../../images/logo23.png';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -9,14 +9,17 @@ const ProfileInfo = (props) => {
   }
   return (
     <div>
-      {/* <img
-        className={s.content__header}
-        src='https://gratisography.com/wp-content/uploads/2022/06/gratisography-boom-box-free-stock-photo-1170x780.jpg'
-        alt='header-logo'
-      /> */}
-      <img src={props.profile.photos.large} alt='' />
+      <img
+        src={
+          props.profile.photos.large === null
+            ? defaultAvatar
+            : props.profile.photos.large
+        }
+        alt='avatar'
+      />
       <h3>Name: {props.profile.fullName}</h3>
-      <ProfileStatus status={'Hello!'} />
+      <p>Status:</p>
+      <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
     </div>
   );
 };

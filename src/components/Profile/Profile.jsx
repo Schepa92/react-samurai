@@ -3,11 +3,13 @@ import React from 'react';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 const Profile = (props) => {
-  console.log('Open Profile Page');
-  // debugger;
   return (
     <>
-      <ProfileInfo profile={props.profile} />
+      <ProfileInfo
+        profile={props.profile}
+        status={props.status}
+        updateStatus={props.updateStatus}
+      />
       <MyPostsContainer />
     </>
   );
