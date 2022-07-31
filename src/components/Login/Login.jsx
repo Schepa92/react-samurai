@@ -3,6 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { connect } from 'react-redux';
 import { login } from '../../redux/authReducer';
 import { Navigate } from 'react-router-dom';
+import * as EmailValidator from 'email-validator';
+import './LoginModule.css';
 
 const Login = (props) => {
   if (props.isAuth) {
@@ -14,9 +16,11 @@ const Login = (props) => {
       <Formik
         initialValues={{ login: '', password: '', rememberMe: false }}
         validate={(values) => {
-          const errors = {};
+          let errors = {};
           if (!values.login) {
-            errors.login = 'Invalid login';
+            errors.login = 'Required';
+          } else if (!EmailValidator.validate(values.login)) {
+            errors.login = 'Invalid email address.';
           } else if (!values.password) {
             errors.password = 'Invalid password';
           }
@@ -30,9 +34,9 @@ const Login = (props) => {
         }}
       >
         {({ isSubmitting, values }) => (
-          <Form>
+          <Form className='loginForm'>
             <div>
-              <Field type='text' name='login' placeholder='Login' />
+              <Field type='email' name='login' placeholder='Login' />
               <ErrorMessage name='login' component='div' />
             </div>
             <div>
