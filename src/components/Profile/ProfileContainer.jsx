@@ -1,13 +1,14 @@
 import React from 'react';
+import { compose } from 'redux';
 import Profile from './Profile';
 import { connect } from 'react-redux';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+
 import {
   getUserProfile,
   getUserStatus,
   updateStatus,
 } from '../../redux/profileReducer';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { compose } from 'redux';
 import withAuthRedirect from '../../HOC/withAuthRedirect';
 
 function withRouter(Component) {
