@@ -2,6 +2,7 @@ import React from 'react';
 import Preloader from '../../Preloader/Preloader';
 import ProfileStatus from './ProfileStatus';
 import defaultAvatar from '../../images/logo23.png';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -19,7 +20,10 @@ const ProfileInfo = (props) => {
       />
       <h3>Name: {props.profile.fullName}</h3>
       <p>Status:</p>
-      <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+      <ProfileStatusWithHooks
+        status={props.status}
+        updateStatus={props.updateStatus}
+      />
     </div>
   );
 };
