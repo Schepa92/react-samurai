@@ -1,21 +1,41 @@
 import React from 'react';
-import FriendsItem from './FriendsItem';
 import s from './Friends.module.css';
 import { NavLink } from 'react-router-dom';
+import defaultAvatar from '../../../images/logo23.png';
+import { useEffect } from 'react';
+
+const FriendsItem = (props) => {
+  return (
+    <div>
+      <img
+        className={s.avatar}
+        src={
+          props.u.photos.small != null ? props.u.photos.small : defaultAvatar
+        }
+        alt=''
+      />
+      <p className={s.text}>{props.name}</p>
+    </div>
+  );
+};
 
 const Friends = (props) => {
-  // debugger;
-  let friendsElements = props.sidebar.map((f) => (
-    <FriendsItem name={f.name} url={f.url} key={f.id} />
+  useEffect(() => {
+    props.getUsers();
+  }, []);
+  let friendsElements = props.users.map((u) => (
+    <FriendsItem name={u.name} url={u.url} key={u.id} u={u} />
   ));
-  return (
-    <>
-      <NavLink to='/users'>
-        <h3 className={s.sidebarTitle}>Friends</h3>
-      </NavLink>
-      <div className={s.friends}>{friendsElements}</div>
-    </>
-  );
+  if (props.isAuth) {
+    return (
+      <>
+        <NavLink to='/users'>
+          <h3 className={s.sidebarTitle}>Friends</h3>
+        </NavLink>
+        <div className={s.friends}>{friendsElements}</div>
+      </>
+    );
+  }
 };
 
 export default Friends;
