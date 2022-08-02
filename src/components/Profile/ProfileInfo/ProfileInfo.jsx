@@ -1,6 +1,5 @@
 import React from 'react';
 import Preloader from '../../Preloader/Preloader';
-import ProfileStatus from './ProfileStatus';
 import defaultAvatar from '../../images/logo23.png';
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 

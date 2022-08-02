@@ -1,12 +1,12 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import React from 'react';
 
 import NavBar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import React from 'react';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';

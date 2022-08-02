@@ -10,7 +10,7 @@ const MyPosts = (props) => {
   ));
 
   return (
-    <div className={s.posts}>
+    <div className={s.postsLayout}>
       <h3>My posts</h3>
       <Formik
         initialValues={{ post: '' }}

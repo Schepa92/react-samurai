@@ -6,8 +6,8 @@ import { Navigate } from 'react-router-dom';
 import * as EmailValidator from 'email-validator';
 import './LoginModule.css';
 
-const Login = (props) => {
-  if (props.isAuth) {
+const Login = ({ isAuth, login }) => {
+  if (isAuth) {
     return <Navigate to={'/profile'} />;
   }
   return (
@@ -28,7 +28,7 @@ const Login = (props) => {
         }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            props.login(values.login, values.password, values.rememberMe);
+            login(values.login, values.password, values.rememberMe);
             setSubmitting(false);
           }, 400);
         }}
